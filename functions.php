@@ -15,7 +15,20 @@ add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list'
 // ajout add_theme_support pour les titre et le logo au niveau de de fonction.php
 add_theme_support( 'title-tag' );
 add_theme_support( 'custom-logo', array(
-    'height' => 480,
-    'width'  => 720,
+    'height' => 160,
+    'width'  => 160,
 ) );
+
+// 
+
+// ajout fonction d'ajout/enregistrement menu
+
+	function enregistrement_des_menus(){
+		register_nav_menus( array(
+	    	'menu_entete' => 'Menu entete',
+	    	'menu_footer'  => 'Menupied pied de page',
+		) );
+	}
+	add_action( 'after_setup_theme', 'mytheme_register_nav_menu', 0 );
+
 
