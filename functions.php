@@ -21,7 +21,7 @@ add_theme_support( 'custom-logo', array(
 
 // 
 
-// ajout fonction d'ajout/enregistrement menu
+// ajout fonction d'ajout/enregistrement menu // cours 4 le 2023-02-09
 
 	function enregistrement_des_menus(){
 		register_nav_menus( array(
