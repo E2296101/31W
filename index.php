@@ -10,8 +10,8 @@ if (have_posts()):
     while (have_posts()) : the_post();
         the_title('<h1>','</h1>');
         the_content('<p>','</p>');
-        the_excerpt('<small>','</small>');
-        wp_trim_words( $text, $num_words, $more, $original_text )
+       // the_excerpt('<small>','</small>');
+       echo wp_trim_words(get_the_excerpt(),4);
     endwhile;
 endif;
 ?>   
