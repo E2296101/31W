@@ -7,9 +7,10 @@ get_header() ?>
     <h3>index.php</h3>
 <?php 
 if (have_posts()):
-        the_post();
+   while(have_posts()): the_post();
         the_title('<h1>','</h1>');
-        the_content('<p>','</p>'); 
+        the_content();  
+    endwhile;    
 endif;
 ?>   
 </main> 

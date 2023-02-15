@@ -1,7 +1,7 @@
 <?php
 // Enfiler la feuille de style
 function ajouter_styles() {
-    wp_enqueue_style('31w-style-principal', // id de la feuille de style
+    wp_enqueue_style('31W-THEME-EXERCICE_1', // id de la feuille de style
                 get_template_directory_uri() . '/style.css', // adresse url de la feuille de style
                 array(), // les dépendances avec les autres feuilles de style
                 filemtime(get_template_directory() . '/style.css')); // la de la dernière feuille de style
@@ -23,12 +23,13 @@ add_theme_support( 'custom-logo', array(
 
 // ajout fonction d'ajout/enregistrement menu // cours 4 le 2023-02-09
 
-	function enregistrement_des_menus(){
-		register_nav_menus( array(
-	    	'menu_entete' => 'Menu entete',
-	    	'menu_footer'  => 'Menupied pied de page',
-		) );
-	}
-	add_action( 'after_setup_theme', 'mytheme_register_nav_menu', 0 );
 
 
+
+function enregistrement_des_menus() {
+    register_nav_menus( array(
+        'menu_entete' => 'Menu entête',
+        'menu_footer' => 'Menu pied de page',  
+    ) );
+}
+add_action( 'after_setup_theme', 'enregistrement_des_menus', 0 );

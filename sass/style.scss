@@ -18,5 +18,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /*normalise*/
 @import "normalize/normalize";
+@import "normalize/boxsizing";
+
+@import "composants/entete";
 /* base */
 @import "base/heading";
