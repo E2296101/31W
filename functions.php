@@ -20,8 +20,8 @@ add_theme_support( 'html5',
 // ajout add_theme_support pour les titre et le logo au niveau de de fonction.php
 add_theme_support( 'title-tag' );
 add_theme_support( 'custom-logo', array(
-                    'height' => 150,
-                    'width'  => 150,
+                    'height' => 50,
+                    'width'  => 50,
 ) );
 
 // 

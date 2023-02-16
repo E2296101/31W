@@ -337,12 +337,20 @@ html {
   box-sizing: border-box;
 }
 
+.logomenu {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+}
+
 .menu-entete-container .menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #111;
 }
 .menu-entete-container .menu .menu-item {
   float: left;
@@ -356,7 +364,7 @@ html {
   text-decoration: none;
 }
 .menu-entete-container .menu .menu-item a:hover:not(.active) {
-  background-color: #111;
+  background-color: #333;
 }
 .menu-entete-container .active {
   background-color: #04AA6D;
