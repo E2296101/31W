@@ -10,13 +10,18 @@ add_action( 'wp_enqueue_scripts', 'ajouter_styles' );
 
 
 // La fonction add_theme_support('html5') est utilisée pour ajouter le support HTML5 pour les éléments de mise en forme dans un thème WordPress.
-add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
+add_theme_support( 'html5', 
+                array( 'search-form', 
+                        'comment-form', 
+                        'comment-list', 
+                        'gallery', 
+                        'caption' ) );
 
 // ajout add_theme_support pour les titre et le logo au niveau de de fonction.php
 add_theme_support( 'title-tag' );
 add_theme_support( 'custom-logo', array(
-    'height' => 160,
-    'width'  => 160,
+                    'height' => 150,
+                    'width'  => 150,
 ) );
 
 // 
