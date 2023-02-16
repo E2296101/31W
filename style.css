@@ -373,6 +373,18 @@ html {
   border-right: none;
 }
 
+.blocflex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.blocflex article {
+  border: 1px solid black;
+  flex: 1 0 300px;
+  max-width: 300px;
+  padding: 10px;
+}
+
 /* base */
 h1 {
   font-size: clamp(0.75rem, -0.75rem + 4.8vw, 3.75rem);

@@ -1,0 +1,14 @@
+.blocflex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    article{
+        border: 1px solid black;
+        flex: 1 0 300px;
+        max-width: 300px;
+
+        padding: 10px;
+    }
+
+}
