@@ -50,14 +50,25 @@ add_action( 'after_setup_theme', 'enregistrement_des_menus', 0 );
  */
 
 
+
+
  function cidweb_modifie_requete_principal( $query ) {
     if ( 
         $query->is_home() // si page d'accueil
         && $query->is_main_query() //si requete principale
         && ! is_admin() ) { // non tableau de bord
-      $query->set( 'category_name', 'note-cours' ); // filtre les articles de categorie
+     //$query->set( 'category_name', 'note-cours' ); // filtre les articles de categorie
       $query->set( 'orderby', 'title' ); // trie selon le type
       $query->set( 'order', 'ASC' ); // en ordre ascendant
       }
      }
      add_action( 'pre_get_posts', 'cidweb_modifie_requete_principal' );
+
+
+     function ajouter_classe_active($classes, $item) {
+    if (in_array('current-menu-item', $classes)) {
+        $classes[] = 'active';
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'ajouter_classe_active', 10, 2);
