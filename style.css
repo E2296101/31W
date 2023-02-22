@@ -342,7 +342,7 @@ html {
   gap: 10px;
   justify-content: space-between;
   align-items: center;
-  background-color: #111;
+  background-color: #1d1d1d;
 }
 
 .custom-logo {
@@ -355,7 +355,7 @@ html {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #111;
+  background-color: #1d1d1d;
 }
 .menu-entete-container .menu .menu-item {
   float: left;
