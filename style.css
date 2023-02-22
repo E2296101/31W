@@ -382,6 +382,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-self: center;
   margin-left: 100px;
   margin-right: 100px;
 }
@@ -395,15 +396,13 @@ html {
 
 .article-box-shadow {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
-
-/* base */
+} /* base */
 h1 {
   font-size: clamp(0.75rem, -0.75rem + 4.8vw, 3.75rem);
 }
 
 h2 {
-  font-size: clamp(0.625rem, -0.3125rem + 3vw, 2.5rem);
+  font-size: clamp(1rem, -0.3125rem + 3vw, 1.875rem);
 }
 
 h3 {

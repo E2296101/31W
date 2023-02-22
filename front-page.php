@@ -8,7 +8,7 @@
                 while (have_posts()) : the_post();
         ?>
                 <article class="article-box-shadow">
-                    <h4><?= get_the_title();  ?> </a></h4>
+                    <h2><?= get_the_title();  ?> </a></h2>
                 <?php 
                     echo wp_trim_words(get_the_excerpt(), 40);
                     echo "<a href='".get_permalink()."'> Lire </a>"; 
