@@ -7,7 +7,7 @@
             if (have_posts()):
                 while (have_posts()) : the_post();
         ?>
-                <article>
+                <article class="article-box-shadow">
                     <h4><?= get_the_title();  ?> </a></h4>
                 <?php 
                     echo wp_trim_words(get_the_excerpt(), 40);
