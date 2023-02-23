@@ -13,10 +13,13 @@
             <?php 
                 the_custom_logo()
             ?>
-            <?php wp_nav_menu(array(
-                                'menu' =>'entete',
-                                'container' => 'nav'
-                                ));
-            ?>
+            <div class="menu_left">
+                <?php wp_nav_menu(array(
+                                    'menu' =>'entete',
+                                    'container' => 'nav'
+                                    ));
+                ?>
+                <?=get_search_form()?>
+            </div>
         </div>
     </header>
