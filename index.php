@@ -3,7 +3,7 @@
 <?php
     get_header() 
 ?>
-<main>
+<main class="site__main">
 <section class="blocflex">
         <?php 
             if (have_posts()):

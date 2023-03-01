@@ -2,7 +2,7 @@
 <?php
     get_header() 
 ?>
-<main>
+<main class="site__main">
 <section class="blocflex blocflex_recherche">
         <?php 
             if (have_posts()):

@@ -7,7 +7,7 @@
     <title>Introductin à la création d'un thème Wordpress</title>
     <?php wp_head(); ?>
 </head>
-<body>
+<body class="site">
     <header>
         <div class="logomenu">
             <?php 
