@@ -461,7 +461,7 @@ p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-/* --layout-- */
+/* -- cours 9 : layout -- */
 .site__entete {
   grid-area: header;
   padding: 1rem clamp(1rem, 3vw, 20rem);
