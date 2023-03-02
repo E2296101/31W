@@ -413,6 +413,45 @@ html {
   margin-right: 30px;
 }
 
+/* -- cours 9 : layout -- */
+.site__entete {
+  grid-area: header;
+  padding: 1rem clamp(1rem, 3vw, 20rem);
+  background-color: antiquewhite;
+}
+
+.site__main {
+  grid-area: main;
+  overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+}
+
+.site__footer {
+  grid-area: footer;
+  background-color: antiquewhite;
+}
+
+.site__aside {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  grid-area: aside;
+}
+
+/* Partie Body ou division globale */
+.site {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "aside" "section";
+  row-gap: 50px;
+  /* cours 9 : ajout mediaQuery */
+}
+@media screen and (min-width: 1000px) {
+  .site {
+    grid-template-columns: 20% auto;
+    grid-template-areas: "aside section";
+  }
+}
+
 /* base */
 h1 {
   font-size: clamp(0.75rem, -0.75rem + 4.8vw, 3.75rem);
@@ -459,34 +498,4 @@ h6 {
 
 p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-}
-
-/* -- cours 9 : layout -- */
-.site__entete {
-  grid-area: header;
-  padding: 1rem clamp(1rem, 3vw, 20rem);
-  background-color: antiquewhite;
-}
-
-.site__main {
-  grid-area: main;
-  overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-}
-
-.site__footer {
-  grid-area: footer;
-  background-color: antiquewhite;
-}
-
-.site__aside {
-  grid-area: aside;
-  background-color: rgb(47, 148, 210);
-}
-
-/* Partie Body ou division globale */
-.site {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-areas: "header" "main" "footer";
-  row-gap: 50px;
 }/*# sourceMappingURL=style.css.map */
