@@ -30,6 +30,8 @@
         
        <?php
             $category = get_queried_object();
+            //var_dump($category);
+            //die();
             if (isset($category))
             {
                 $lemenu = $category->slug;

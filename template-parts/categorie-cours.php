@@ -5,7 +5,7 @@ $titre_long = substr($titre,7,-5);
 $duree = substr($titre,-5);
 ?>
 
-<article class="article-box-shadow">
+<article class="article_box article-box-shadow">
     <h2>
         
         <?=$sigle?>

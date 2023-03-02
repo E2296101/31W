@@ -3,7 +3,7 @@ $titre = get_the_title();
 $titre_long = substr($titre,3);
 ?>
 
-<article class="article-box-shadow">
+<article class="article_box article-box-shadow">
     <h2>
         <?=$titre_long?> 
     </h2>
