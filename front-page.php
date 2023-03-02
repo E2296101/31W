@@ -5,16 +5,7 @@
 
 
 
-<main class="site__main site">
-   <aside class="site__aside">
-        <h5>notes de Cours</h5>
-        <?php wp_nav_menu(array(
-            "menu" => "note-cours",
-            "container" => "nav"
-
-        )) ?> 
-   </aside>
-
+<main class="site__main">
     <section class="blocflex">
             <?php 
                 if (have_posts()):

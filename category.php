@@ -3,33 +3,19 @@
 <?php
     get_header() 
 ?>
-<main class="site__main site">
-    <aside class="site__aside">
+<main class="site__main">
+
       
         
        <?php
-            $category = get_queried_object();
+             $category = get_queried_object();
             if (isset($category))
             {
                 $lemenu = $category->slug;
-                $titre_menu = ($lemenu=="note-cours")?"Notes de Cours":"Liste des Cours" ; // changer le titre du menu selon le menu affiché
                 $nb_lettres = ($lemenu=="note-cours")?3:7 ; // nombre de lettre à enlever du titre de l'article
-            }else{
-                $lemenu = "note-cours";
-                $titre_menu = "Notes de Cours";
             }
         ?>
-        <h5><?=$titre_menu?></h5>
-        <?php
-            
-            wp_nav_menu(array(
-                "menu" => $lemenu,
-                "container" => "nav"
 
-            ))
-        
-        ?>
-   </aside>
     <section class="blocflex">
             <?php 
 
