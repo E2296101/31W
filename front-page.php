@@ -13,8 +13,6 @@
                     else{
                         get_template_part("template-parts/categorie", "note-cours"); 
                     }
-                     
-          
                 endwhile;
             endif;
             ?>  

@@ -7,7 +7,7 @@
     <title>Introductin à la création d'un thème Wordpress</title>
     <?php wp_head(); ?>
 </head>
-<body class="site">
+<body class="<?= !is_front_page()?'site':''?>">
     <header class="site__entete">
         <div class="logomenu">
             <?php 
@@ -24,6 +24,7 @@
         </div>
     </header>
     <?php
+    if(!is_front_page())
         get_template_part("template-parts/aside");
     ?>
 

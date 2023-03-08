@@ -30,9 +30,6 @@ add_theme_support( 'custom-logo', array(
 
 // ajout fonction d'ajout/enregistrement menu // cours 4 le 2023-02-09
 
-
-
-
 function enregistrement_des_menus() {
     register_nav_menus( array(
         'menu_entete' => 'Menu entête',
@@ -50,9 +47,6 @@ add_action( 'after_setup_theme', 'enregistrement_des_menus', 0 );
  * Dans ce cas çi nous filtrons la requête de la page d'accueil
  * @param WP_query  $query la requête principal de WP
  */
-
-
-
 
  function cidweb_modifie_requete_principal( $query ) {
     if ( 
@@ -74,3 +68,22 @@ add_action( 'after_setup_theme', 'enregistrement_des_menus', 0 );
     return $classes;
 }
 add_filter('nav_menu_css_class', 'ajouter_classe_active', 10, 2);
+
+/**
+ * Modifie le titre des éléments de menu en fonction de l'identifiant du menu.
+ *
+ * @param string $title Le titre de l'élément de menu.
+ * @param object $item L'objet de l'élément de menu.
+ * @param object $args Les arguments du menu.
+ * @param int $depth La profondeur de l'élément de menu.
+ * @return string Le titre modifié de l'élément de menu.
+ */
+function perso_menu_item_title($title, $item, $args) {
+    // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
+    if($args->menu == 'cours') {
+// Modifier la longueur du titre en fonction de vos besoins
+$title = wp_trim_words($title, 3, ' ... ');
+}
+return $title;
+}
+add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);

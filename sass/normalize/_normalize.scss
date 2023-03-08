@@ -74,12 +74,27 @@
    * Remove the gray background on active links in IE 10.
    */
   
-  a {
+/*   a {
     background-color: transparent;
     font-weight: bold;
-    color: blue;
+    color: rgb(139, 139, 184);
     
   }
+ */
+a {
+  font-weight: bold;
+  text-decoration: none; /* supprime le soulignement par défaut */
+  color: #007bff; /* définit la couleur du lien */
+}
+
+a:hover {
+  text-decoration: underline; /* ajoute un soulignement au survol */
+  color: #0056b3; /* change la couleur du lien au survol */
+}
+
+a:visited {
+  color: #545353; /* définit la couleur des liens visités */
+}
   
   /**
    * 1. Remove the bottom border in Chrome 57-

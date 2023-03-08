@@ -80,10 +80,26 @@ pre {
 /**
  * Remove the gray background on active links in IE 10.
  */
+/*   a {
+    background-color: transparent;
+    font-weight: bold;
+    color: rgb(139, 139, 184);
+
+  }
+ */
 a {
-  background-color: transparent;
   font-weight: bold;
-  color: blue;
+  text-decoration: none; /* supprime le soulignement par défaut */
+  color: #007bff; /* définit la couleur du lien */
+}
+
+a:hover {
+  text-decoration: underline; /* ajoute un soulignement au survol */
+  color: #0056b3; /* change la couleur du lien au survol */
+}
+
+a:visited {
+  color: #545353; /* définit la couleur des liens visités */
 }
 
 /**
@@ -379,7 +395,7 @@ html {
   background-color: #858988;
 }
 .menu-entete-container .active {
-  background-color: #333;
+  background-color: #717070;
 }
 .menu-entete-container .menu:last-child {
   border-right: none;
