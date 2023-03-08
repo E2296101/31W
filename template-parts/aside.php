@@ -1,14 +1,13 @@
  <aside class="site__aside">
        <?php
-            $category = get_queried_object();
-            if (isset($category))
+            //$category = get_queried_object();
+            $lemenu = "note-cours";
+            $titre_menu = "Notes de Cours";
+            if(in_category('cours'))
             {
-                $lemenu = $category->slug;
+                $lemenu = 'cours';
                 $titre_menu = ($lemenu=="note-cours")?"Notes de Cours":"Liste des Cours" ; // changer le titre du menu selon le menu affiché
-            }else{
-                $lemenu = "note-cours";
-                $titre_menu = "Notes de Cours";
-            } 
+            }
         ?>
         <h5><?=$titre_menu?></h5>
         <?php
