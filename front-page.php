@@ -10,8 +10,10 @@
                     if(in_category('galerie')){
                         get_template_part("template-parts/categorie", "galerie"); 
                     } 
-                    if(!in_category('galerie'))
-                    get_template_part("template-parts/categorie", "note-cours");   
+                    else{
+                        get_template_part("template-parts/categorie", "note-cours"); 
+                    }
+                     
           
                 endwhile;
             endif;
