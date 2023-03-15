@@ -80,9 +80,11 @@ add_filter('nav_menu_css_class', 'ajouter_classe_active', 10, 2);
  */
 function perso_menu_item_title($title, $item, $args) {
     // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
-    if($args->menu == 'cours') {
+if($args->menu == 'cours') {
 // Modifier la longueur du titre en fonction de vos besoins
-$title = wp_trim_words($title, 3, ' ... ');
+$sigle = substr($title,4,3);
+$title = substr($title,7);
+$title = "<code>".$sigle."</code>"."<p>".wp_trim_words($title, 2, ' ... ')."</p>";
 }
 return $title;
 }
