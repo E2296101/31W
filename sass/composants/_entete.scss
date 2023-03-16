@@ -2,10 +2,29 @@
     display: flex;
     gap: 10px;
     justify-content: space-between;
+    flex-direction: column;
    align-items: center;
   background-color: #1d1d1d;
+      @media screen and (min-width:1000px) {
+        flex-direction: row;
+        align-items:center;
+        justify-content: flex-end;
+        flex: 1;
+    }
    
 }
+/* .menusearch {
+    display : flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+    @media screen and (min-width:1000px) {
+        flex-direction: row;
+        align-items:center;
+        justify-content: flex-end;
+        flex: 1;
+    }
+} */
 
 .custom-logo{
 
@@ -16,8 +35,15 @@
 .menu_left{
     display: flex;
     gap: 40px;
+    flex-direction:column-reverse;
     justify-content: space-between;
     align-items: center;
+    @media screen and (min-width:1000px) {
+        flex-direction: row;
+        align-items:center;
+        justify-content: flex-end;
+        flex: 1;
+    }
 
 }
 

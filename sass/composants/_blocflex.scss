@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     gap: 10px;
     justify-self: center;
+    
 
     margin-left: 100px;
     margin-right: 100px;
@@ -12,7 +13,7 @@
     .article_box{
         border: 1px solid black;
         flex: 1 0 300px;
-        max-width: 300px;
+        //max-width: 300px;
 
         padding: 15px 15px 30px 15px;
         border-radius: 10px;

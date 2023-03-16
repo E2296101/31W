@@ -80,12 +80,21 @@ add_filter('nav_menu_css_class', 'ajouter_classe_active', 10, 2);
  */
 function perso_menu_item_title($title, $item, $args) {
     // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
+//$sigle = $title = "";
 if($args->menu == 'cours') {
 // Modifier la longueur du titre en fonction de vos besoins
 $sigle = substr($title,4,3);
 $title = substr($title,7);
-$title = "<code>".$sigle."</code>"."<p>".wp_trim_words($title, 2, ' ... ')."</p>";
+$title = "<code class='cours__sigle'>".$sigle."</code>"."<p class='cours__titre'>".wp_trim_words($title, 2, ' ... ')."</p>";
 }
+if($args->menu == 'note-cours') {
+// Modifier la longueur du titre en fonction de vos besoins
+$index = strpos($title, "-");
+$sigle = substr($title,0,$index);
+$title = substr($title,$index+1);
+$title = "<code class='note__cours__sigle'>".$sigle."</code>"."<p class='note__cours__titre'>".wp_trim_words($title, 2, ' ... ')."</p>";
+}
+    
 return $title;
 }
 add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);
