@@ -3,6 +3,7 @@
 ?>
 <main class="site__main">
 <?php 
+    echo"single.php";
     if (have_posts()):
     while(have_posts()): the_post();
             the_title('<h4>','</h4>');

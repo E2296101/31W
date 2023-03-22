@@ -7,7 +7,8 @@
     <title>Introductin à la création d'un thème Wordpress</title>
     <?php wp_head(); ?>
 </head>
-<body class="<?= !is_front_page()?'site':''?>">
+<!-- 22-03-2023 exo 3 -->
+<body class="<?= !is_front_page()?'site':''?> custom-background">
     <header class="site__entete">
         <div class="logomenu">
             <?php 
