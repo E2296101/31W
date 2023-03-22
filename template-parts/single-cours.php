@@ -3,8 +3,8 @@
     
     <?php 
     
-    echo "<p> Professeur : ".get_field( 'professeur' )."</p>";
-    echo "<p> Filiere : ".get_field( 'domaine' )."</p>";
+    echo "<p> Professeur : <span class='nom-auteur'>".get_field( 'professeur' )."</span></p>";
+    echo "<p> Filiere : <span class='nom-auteur'>".get_field( 'domaine' )."</span></p>";
     // 22-03-2023 exo 3
     ?>
 </div>

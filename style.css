@@ -645,6 +645,10 @@ p {
 }
 
 .info-article {
-  display: flex;
-  flex-direction: column;
+  line-height: 5px;
+  margin-top: 40px;
+}
+
+.nom-auteur {
+  font-size: 16px;
 }/*# sourceMappingURL=style.css.map */

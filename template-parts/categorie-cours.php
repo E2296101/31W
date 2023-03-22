@@ -16,7 +16,7 @@ $duree = substr($titre,$position);
     echo wp_trim_words(get_the_excerpt(), 20);
     echo "<a href='".get_permalink()."'> Lire </a>";
     echo "<p>".$duree."</p>";
-    echo "<p>".get_field( 'professeur' )."</p>";
+    echo "<p> Auteur : <span class='nom-auteur'>".get_field( 'professeur' )."</span></p>";
     // 22-03-2023 exo 3
 ?>
 </article>
