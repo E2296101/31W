@@ -12,6 +12,7 @@
             list-style-type: none;
             
         a{
+            text-decoration: none;
             .note__cours__sigle{
                 padding : 3px;
             }
@@ -25,6 +26,15 @@
                 }
             }
            
+        }
+        a:hover{
+            
+            .note__cours__sigle , .note__cours__titre{
+                background-color: rgb(190, 189, 187);
+                color: white;
+                border-radius: 10px;
+            }
+
         }
     }
 }

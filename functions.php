@@ -90,7 +90,10 @@ $title = "<code class='cours__sigle'>".$sigle."</code>"."<p class='cours__titre'
 if($args->menu == 'note-cours') {
 // Modifier la longueur du titre en fonction de vos besoins
 $index = strpos($title, "-");
-$sigle = substr($title,0,$index);
+if(substr($title,0,1) == '0')
+    $sigle = substr($title,1,$index-1);
+else
+    $sigle = substr($title,0,$index);
 $title = substr($title,$index+1);
 $title = "<code class='note__cours__sigle'>".$sigle."</code>"."<p class='note__cours__titre'>".wp_trim_words($title, 2, ' ... ')."</p>";
 }

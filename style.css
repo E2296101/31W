@@ -589,6 +589,9 @@ hr {
 .menu-cours-container .menu .menu-item {
   list-style-type: none;
 }
+.menu-cours-container .menu .menu-item a {
+  text-decoration: none;
+}
 .menu-cours-container .menu .menu-item a .cours__sigle {
   padding: 3px;
 }
@@ -601,6 +604,11 @@ hr {
   .menu-cours-container .menu .menu-item a .cours__titre {
     display: block;
   }
+}
+.menu-cours-container .menu .menu-item a:hover .cours__sigle, .menu-cours-container .menu .menu-item a:hover .cours__titre {
+  background-color: rgb(190, 189, 187);
+  color: white;
+  border-radius: 10px;
 }
 
 .menu-note-cours-container .menu {
@@ -616,6 +624,9 @@ hr {
 .menu-note-cours-container .menu .menu-item {
   list-style-type: none;
 }
+.menu-note-cours-container .menu .menu-item a {
+  text-decoration: none;
+}
 .menu-note-cours-container .menu .menu-item a .note__cours__sigle {
   padding: 3px;
 }
@@ -628,6 +639,11 @@ hr {
   .menu-note-cours-container .menu .menu-item a .note__cours__titre {
     display: block;
   }
+}
+.menu-note-cours-container .menu .menu-item a:hover .note__cours__sigle, .menu-note-cours-container .menu .menu-item a:hover .note__cours__titre {
+  background-color: rgb(190, 189, 187);
+  color: white;
+  border-radius: 10px;
 }
 
 /* -- cours 9 : layout -- */
