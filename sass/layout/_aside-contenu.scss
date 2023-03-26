@@ -11,16 +11,18 @@
 
 .site__footer {
   grid-area: footer;
-  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  // background-color: antiquewhite;
 }
 
 .site__aside {
-    border:  1px solid black;
-    margin-left: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    grid-area: aside;
- 
+  border: 1px solid black;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  grid-area: aside;
 }
 
 /* Partie Body ou division globale */
@@ -33,14 +35,12 @@
     "main"
     "footer";
   row-gap: 50px;
- /* cours 9 : ajout mediaQuery */
-  @media screen and (min-width:1000px){
+  /* cours 9 : ajout mediaQuery */
+  @media screen and (min-width: 1000px) {
     grid-template-columns: 20% auto;
     grid-template-areas:
-       
       "header header"
       "aside main"
-      "footer footer";        
+      "footer footer";
   }
 }
-

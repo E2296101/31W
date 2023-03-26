@@ -98,10 +98,6 @@ a:hover {
   color: #0056b3; /* change la couleur du lien au survol */
 }
 
-a:visited {
-  color: #545353; /* définit la couleur des liens visités */
-}
-
 /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
@@ -431,19 +427,96 @@ html {
   border-right: none;
 }
 
+footer {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #000000);
+  color: #436fa4;
+  padding: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  width: 100%;
+}
+@media screen and (min-width: 565px) {
+  .container {
+    /*         flex-direction: row;
+            align-items:center;
+            justify-content: flex-end;
+            flex: 1; */
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    flex: 1;
+  }
+}
+
+.column {
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .column {
+    width: 23%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+}
+
+footer h4 {
+  margin-top: 0;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #bababa;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  width: 100%;
+}
+
 .blocflex {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-self: center;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .blocflex .article_box {
   border: 1px solid black;
-  flex: 1 0 300px;
+  flex: 1 0 200px;
   padding: 15px 15px 30px 15px;
   border-radius: 10px;
+}
+@media screen and (min-width: 1025px) {
+  .blocflex .article_box {
+    flex: 1 0 400px;
+  }
 }
 
 .blocflex_recherche {
@@ -570,12 +643,14 @@ html {
 
 .site__footer {
   grid-area: footer;
-  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
 }
 
 .site__aside {
   border: 1px solid black;
   margin-left: 10px;
+  margin-right: 10px;
   border-radius: 10px;
   padding: 10px;
   grid-area: aside;
@@ -606,11 +681,11 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(0.5625rem, -0.25rem + 2.6vw, 2.1875rem);
+  font-size: clamp(0.7rem, -0.25rem + 2.6vw, 1.875rem);
 }
 
 h4 {
-  font-size: clamp(0.5rem, -0.1875rem + 2.2vw, 1.875rem);
+  font-size: clamp(0.65rem, -0.1875rem + 2.2vw, 1.875rem);
 }
 
 h5 {
@@ -618,11 +693,11 @@ h5 {
 }
 
 h6 {
-  font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
+  font-size: clamp(1rem, 0.125rem + 2vw, 1.2rem);
 }
 
 P {
-  font-size: clamp(0.5rem, 0.125rem + 1.5vw, 1.1rem);
+  font-size: clamp(0.7rem, 0.125rem + 1.5vw, 1.1rem);
 }
 
 h1 {

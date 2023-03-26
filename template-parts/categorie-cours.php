@@ -11,7 +11,7 @@ $duree = substr($titre,$position);
     <h2> 
         <?=$sigle?>
     </h2>
-    <p> <?=$titre_long?> </p>
+    <h3> <?=$titre_long?> </h3>
 <?php 
     echo wp_trim_words(get_the_excerpt(), 20);
     echo "<a href='".get_permalink()."'> Lire </a>";

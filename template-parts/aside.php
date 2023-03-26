@@ -9,7 +9,7 @@
                 $titre_menu = ($lemenu=="note-cours")?"Notes de Cours":"Liste des Cours" ; // changer le titre du menu selon le menu affiché
             }
         ?>
-        <h5><?=$titre_menu?></h5>
+        <h3><?=$titre_menu?></h3>
         <?php
             wp_nav_menu(array(
                 "menu" => $lemenu,
