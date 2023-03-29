@@ -36,6 +36,15 @@
       </ul>
     </div>
   </div>
+  <div class="sidebar">
+    <?php dynamic_sidebar( 'pied-page-1' ); ?>
+  </div>
+  <div class="sidebar">
+    <?php dynamic_sidebar( 'pied-page-2' ); ?>
+  </div>
+  <div class="sidebar">
+    <?php dynamic_sidebar( 'pied-page-3' ); ?>
+  </div>
 </footer>
 
     <?php wp_footer(); ?>

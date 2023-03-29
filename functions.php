@@ -117,3 +117,53 @@ $defaults = array(
 	'admin-preview-callback' => '',
 );
 add_theme_support( 'custom-background', $defaults );
+
+// Enregistrer le sidebar
+function enregistrer_sidebar1() {
+    register_sidebar( array(
+        'name' => __( 'Sidebar', '31W AMINE LHANI' ),
+        'id' => 'sidebar',
+        'description' => __( 'Un widget area pour afficher des widgets dans la sidebar.', '31W AMINE LHANI' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'enregistrer_sidebar1' );
+
+// Enregistrer le sidebar
+function enregistrer_sidebar() {
+    register_sidebar( array(
+        'name' => __( 'Pied de page 1', '31W AMINE LHANI' ),
+        'id' => 'pied-page-1',
+        'description' => __( 'Une zone  widget pour afficher des widgets dans le pied de page.', '31W AMINE LHANI' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Pied de page 2', '31W AMINE LHANI' ),
+        'id' => 'pied-page-2',
+        'description' => __( 'Une zone  widget pour afficher des widgets dans le pied de page.', '31W AMINE LHANI' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Pied de page 3', '31W AMINE LHANI' ),
+        'id' => 'pied-page-3',
+        'description' => __( 'Une zone  widget pour afficher des widgets dans le pied de page.', '31W AMINE LHANI' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ) );
+
+
+}
+add_action( 'widgets_init', 'enregistrer_sidebar' );
