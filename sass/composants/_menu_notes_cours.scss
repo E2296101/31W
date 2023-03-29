@@ -1,0 +1,42 @@
+.menu-note-cours-container { //nav
+
+.menu{ // ul
+    display : flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @media screen and (min-width : 1000px) {
+        flex-direction: column;
+    }
+
+    .menu-item{ // li
+            list-style-type: none;
+            
+        a{
+            text-decoration: none;
+            .note__cours__sigle{
+                padding : 3px;
+            }
+            .note__cours__titre{
+               display : none;
+               font-size: 12px;
+               padding-left: 10px;
+                @media screen and (min-width : 1000px) {
+                    display : block;
+                    
+                }
+            }
+           
+        }
+        a:hover{
+            
+            .note__cours__sigle , .note__cours__titre{
+                background-color: rgb(190, 189, 187);
+                color: white;
+                border-radius: 10px;
+            }
+
+        }
+    }
+}
+
+}
