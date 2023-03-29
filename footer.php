@@ -48,7 +48,6 @@
   <div>
     <?php wp_nav_menu(array(
                         'menu' =>'lien-externe-1',
-                        'container' => 'footer',
                         'container_class' => 'footer__lien__nav'
                         ));
     ?>
