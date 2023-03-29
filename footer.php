@@ -45,6 +45,14 @@
   <div class="sidebar">
     <?php dynamic_sidebar( 'pied-page-3' ); ?>
   </div>
+  <div>
+    <?php wp_nav_menu(array(
+                        'menu' =>'lien-externe-1',
+                        'container' => 'footer',
+                        'container_class' => 'footer__lien__nav'
+                        ));
+    ?>
+  </div>
 </footer>
 
     <?php wp_footer(); ?>
