@@ -3,6 +3,11 @@
 ?>
 
 <main class="site__main">
+
+<!-- a faire ajouter d autre section exemple banniere et section evenement -->
+<section>
+    asdasdasd
+</section>
     <section class="blocflex">
             <?php 
                 if (have_posts()):

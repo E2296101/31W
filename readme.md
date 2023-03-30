@@ -4,9 +4,12 @@
 #### Taches réalisées
 
 L'objectif :
-- 
-- 
-- 
+
+- Ajouter, gérer et utiliser des champs personnalisés
+- Ajouter trois «sidebar» dans le footer
+- Ajout d'un template de page
+- Ajout d'image mise-en-avant
+- Déployer votre projet sur le serveur Siteground
 
 
 #### Site Hébergement
