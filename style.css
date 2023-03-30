@@ -499,6 +499,10 @@ hr {
   width: 100%;
 }
 
+.invisible {
+  display: none;
+}
+
 .blocflex {
   display: flex;
   flex-wrap: wrap;

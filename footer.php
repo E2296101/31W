@@ -36,14 +36,16 @@
       </ul>
     </div>
   </div>
-  <div class="sidebar">
-    <?php dynamic_sidebar( 'pied-page-1' ); ?>
-  </div>
-  <div class="sidebar">
-    <?php dynamic_sidebar( 'pied-page-2' ); ?>
-  </div>
-  <div class="sidebar">
-    <?php dynamic_sidebar( 'pied-page-3' ); ?>
+  <div class="widget__youtube <?= (!in_category('cours'))?"invisible":""?>">
+    <div class="sidebar">
+      <?php dynamic_sidebar( 'pied-page-1' ); ?>
+    </div>
+    <div class="sidebar">
+      <?php dynamic_sidebar( 'pied-page-2' ); ?>
+    </div>
+    <div class="sidebar">
+      <?php dynamic_sidebar( 'pied-page-3' ); ?>
+    </div>
   </div>
   <div>
     <?php wp_nav_menu(array(

@@ -118,6 +118,8 @@ $defaults = array(
 );
 add_theme_support( 'custom-background', $defaults );
 
+add_theme_support( 'post-thumbnails' ); // tp_4 30-03
+
 // Enregistrer le sidebar
 function enregistrer_sidebar1() {
     register_sidebar( array(
