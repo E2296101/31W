@@ -36,6 +36,24 @@
       </ul>
     </div>
   </div>
+  <div class="widget__youtube <?= (!in_category('cours'))?"invisible":""?>">
+    <div class="sidebar">
+      <?php dynamic_sidebar( 'pied-page-1' ); ?>
+    </div>
+    <div class="sidebar">
+      <?php dynamic_sidebar( 'pied-page-2' ); ?>
+    </div>
+    <div class="sidebar">
+      <?php dynamic_sidebar( 'pied-page-3' ); ?>
+    </div>
+  </div>
+  <div>
+    <?php wp_nav_menu(array(
+                        'menu' =>'lien-externe-1',
+                        'container_class' => 'footer__lien__nav'
+                        ));
+    ?>
+  </div>
 </footer>
 
     <?php wp_footer(); ?>
