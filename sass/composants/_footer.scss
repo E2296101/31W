@@ -76,7 +76,6 @@ footer .widget__youtube {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
   margin-top: 10px;
 }
 
@@ -88,4 +87,11 @@ footer .sidebar {
 .site__footer .widget_block {
   text-align: center;
   max-width: 450px;
+}
+
+.site__footer .footer__lien__nav__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3vw;
 }

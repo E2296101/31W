@@ -49,13 +49,29 @@
       </ul>
     </div>
   </div>
-
-  <div>
-    <?php wp_nav_menu(array(
-                        'menu' =>'lien-externe-1',
-                        'container_class' => 'footer__lien__nav'
-                        ));
-    ?>
+    <hr>
+ <div class="footer__lien__nav__container">
+    <div>
+            <?php wp_nav_menu(array(
+                                'menu' =>'lien-externe-1',
+                                'container_class' => 'footer__lien__nav'
+                                ));
+            ?>
+    </div>
+    <div>
+        <?php wp_nav_menu(array(
+                            'menu' =>'lien-externe-2',
+                            'container_class' => 'footer__lien__nav'
+                            ));
+        ?>
+    </div>
+    <div>
+        <?php wp_nav_menu(array(
+                            'menu' =>'lien-externe-3',
+                            'container_class' => 'footer__lien__nav'
+                            ));
+        ?>
+    </div>
   </div>
 </footer>
 
