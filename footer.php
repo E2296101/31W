@@ -1,6 +1,19 @@
 
 <footer class="site__footer">
-   <hr>
+    
+    <div class="widget__youtube <?= (!in_category('cours'))?"invisible":""?>">
+    <hr>
+        <div class="sidebar">
+        <?php dynamic_sidebar( 'pied-page-1' ); ?>
+        </div>
+        <div class="sidebar">
+        <?php dynamic_sidebar( 'pied-page-2' ); ?>
+        </div>
+        <div class="sidebar">
+        <?php dynamic_sidebar( 'pied-page-3' ); ?>
+        </div>
+    </div>
+    <hr>
   <div class="container">
      
     <div class="column">
@@ -36,17 +49,7 @@
       </ul>
     </div>
   </div>
-  <div class="widget__youtube <?= (!in_category('cours'))?"invisible":""?>">
-    <div class="sidebar">
-      <?php dynamic_sidebar( 'pied-page-1' ); ?>
-    </div>
-    <div class="sidebar">
-      <?php dynamic_sidebar( 'pied-page-2' ); ?>
-    </div>
-    <div class="sidebar">
-      <?php dynamic_sidebar( 'pied-page-3' ); ?>
-    </div>
-  </div>
+
   <div>
     <?php wp_nav_menu(array(
                         'menu' =>'lien-externe-1',

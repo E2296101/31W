@@ -2,47 +2,43 @@ footer {
   background-image: linear-gradient(to bottom, #ffffff00, #000000);
   color: #436fa4;
   padding: 20px;
-  
 }
 
 .container {
- 
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content:space-around;
+  justify-content: space-around;
   align-content: center;
   width: 100%;
 
-
-   @media screen and (min-width:565px) {
-/*         flex-direction: row;
+  @media screen and (min-width: 565px) {
+    /*         flex-direction: row;
         align-items:center;
         justify-content: flex-end;
         flex: 1; */
-        max-width: 1200px;
-        margin: 0 auto;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%; 
-         flex: 1;       
-    }
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    flex: 1;
+  }
 }
 
 .column {
   width: 100%;
   padding: 0 10px;
   box-sizing: border-box;
-  
-  margin-bottom: 10px;
- @media screen and (min-width:768px) {
-  width: 23%;
-  padding: 0 10px;
-  box-sizing: border-box;
-  margin-bottom: 20px;
 
-   } 
+  margin-bottom: 10px;
+  @media screen and (min-width: 768px) {
+    width: 23%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
 }
 
 footer h4 {
@@ -67,13 +63,29 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-hr{
-    width: 100%;
+hr {
+  width: 100%;
 }
-<<<<<<< HEAD
-=======
 
-.invisible{
+.site__footer .invisible {
   display: none;
 }
->>>>>>> 31w/EXO_04
+
+footer .widget__youtube {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+footer .sidebar {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.site__footer .widget_block {
+  text-align: center;
+  max-width: 450px;
+}
