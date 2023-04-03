@@ -169,3 +169,30 @@ function enregistrer_sidebar() {
 
 }
 add_action( 'widgets_init', 'enregistrer_sidebar' );
+
+
+
+// 2023-04-02
+function recuperer_date_adresse_evenement(){
+
+// Créer une instance de WP_Query pour récupérer la page ayant le titre "Porte ouverte de TIM"
+$page_query = new WP_Query( array(
+    'post_type' => 'page',
+    'post_title' => 'Porte ouverte de TIM',
+    'posts_per_page' => 1,
+) );
+
+// Vérifier si une page a été trouvée et récupérer la valeur du champ personnalisé "date_de_levenement"
+if ( $page_query->have_posts() ) {
+    $page = $page_query->posts[0];
+    /* var_dump($page) ; */
+    $valeurs_evenement = [];
+    $date_obj = date_create_from_format('Ymd', get_post_meta( $page->ID, 'date_de_levenement', true ));
+    $valeurs_evenement[0] = date_format($date_obj, 'd-m-Y');
+     $valeurs_evenement[1] = get_post_meta( $page->ID, 'adresse', true );
+     return $valeurs_evenement;
+
+// Réinitialiser la requête de WP_Query
+wp_reset_postdata();
+}
+}
