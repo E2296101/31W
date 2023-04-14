@@ -9,6 +9,13 @@
    
 
 </section> -->
+<section class="text-over-image">
+  <img src="chemin/vers/votre/image.jpg" alt="Description de l'image">
+  <div class="text">
+    <h1>Titre de la section</h1>
+    <p>Contenu de la section</p>
+  </div>
+</section>
 
 <section class="event-section">
   <h4>Introduction à un gestionnaire de contenu</h4>
