@@ -436,7 +436,12 @@ html {
 .text-over-image {
   position: relative;
   margin: 0px;
-  height: 90vh;
+  height: 500px;
+}
+@media screen and (min-width: 768px) {
+  .text-over-image {
+    height: 90vh;
+  }
 }
 
 .text-over-image .text {
@@ -447,7 +452,12 @@ html {
 
 .text-over-image img {
   width: 100%;
-  height: 100%;
+  height: 500px;
+}
+@media screen and (min-width: 768px) {
+  .text-over-image img {
+    height: 100%;
+  }
 }
 
 .text-over-image p {
@@ -682,13 +692,19 @@ footer .sidebar {
 
 .event-section {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .event-section {
+    flex-direction: row;
+    margin: 40px;
+  }
 }
 
 .event-block {
   width: 300px;
-  margin-right: 20px;
-  margin-bottom: 20px;
   padding: 10px;
   text-align: center;
 }

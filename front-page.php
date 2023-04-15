@@ -20,34 +20,23 @@
 </section> -->
 
 
-<section class="event-section">
-    <?php 
-  /*   $menu_items = wp_get_nav_menu_items('evenement');
-    foreach ($menu_items as $menu_item) {
-      $date_adresse_evenement = recuperer_date_adresse_evenement($menu_item->title);
-      echo '<a href="' . $menu_item->url . '">' . $menu_item->title . '</a>';
-      
-    } */
-  ?>
-
-    <?php 
-    $menu_items = wp_get_nav_menu_items('evenement');
-    foreach ($menu_items as $menu_item) {
-        $date_adresse_evenement = recuperer_date_adresse_evenement($menu_item->title);
-        echo '<div class="event-block">';
-        echo '<a href="' . $menu_item->url . '">';
-        // Afficher l'image à partir de la page d'événement
-        if (has_post_thumbnail($menu_item->object_id)) {
-            echo get_the_post_thumbnail($menu_item->object_id, 'thumbnail');
+    <section class="event-section">
+        <?php 
+        $menu_items = wp_get_nav_menu_items('evenement');
+        foreach ($menu_items as $menu_item) {
+            $date_adresse_evenement = recuperer_date_adresse_evenement($menu_item->title);
+            echo '<div class="event-block">';
+            echo '<a href="' . $menu_item->url . '">';
+            // Afficher l'image à partir de la page d'événement
+            if (has_post_thumbnail($menu_item->object_id)) {
+                echo get_the_post_thumbnail($menu_item->object_id, 'thumbnail');
+            }
+            echo '<h3>' . $menu_item->title . '</h3>';
+            echo '</a>';
+            echo '</div>';
         }
-        echo '<h3>' . $menu_item->title . '</h3>';
-        echo '</a>';
-        echo '</div>';
-    }
-    ?>
-</section>
-
-
+        ?>
+    </section>
 
 
     <section class="blocflex">

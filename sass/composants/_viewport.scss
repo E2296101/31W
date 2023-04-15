@@ -5,13 +5,18 @@
 
 .event-section {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    margin: 40px;
+  }
 }
 
 .event-block {
   width: 300px;
-  margin-right: 20px;
-  margin-bottom: 20px;
   padding: 10px;
   text-align: center;
 }

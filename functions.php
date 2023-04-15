@@ -204,24 +204,4 @@ function recuperer_date_adresse_evenement($titre){
 }
 
 
-function ajouter_info_evenement_menu($items, $args) {
-    // Vérifier si le menu affiché est "evenement"
-    if ($args->theme_location == 'evenement') {
-        // Récupérer le titre de chaque élément du menu
-        foreach ($args->menu->items as $item) {
-            $titre = $item->title;
-            // Récupérer les informations de l'événement correspondant
-            $date_adresse_evenement = recuperer_date_adresse_evenement($titre);
-            // Ajouter les informations à l'élément du menu
-            $items .= '<li class="menu-item">' .
-                '<a href="' . $item->url . '">' . $item->title . '</a>' .
-                '<ul class="sub-menu">' .
-                    '<li>Date: ' . $date_adresse_evenement[0] . '</li>' .
-                    '<li>Lieu: ' . $date_adresse_evenement[1] . '</li>' .
-                '</ul>' .
-            '</li>';
-        }
-    }
-    return $items;
-}
-add_filter('wp_nav_menu_items', 'ajouter_info_evenement_menu', 10, 2);
+
