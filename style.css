@@ -680,16 +680,29 @@ footer .sidebar {
   padding: 0 3rem;
 }
 
-/* .event-section {
+.event-section {
+  display: flex;
+  justify-content: space-around;
+}
 
-  padding: 50px;
-  border: solid 1px black;
-  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
-  border-radius: 20px;
+.event-block {
+  width: 300px;
+  margin-right: 20px;
   margin-bottom: 20px;
-  background-image: radial-gradient(circle at center, #90909030, #979174);
+  padding: 10px;
+  text-align: center;
+}
 
-} */
+.event-block h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.event-block img {
+  border-radius: 50%;
+}
+
 .event-title {
   /*  font-size: 32px; */
   margin-bottom: 20px;

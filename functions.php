@@ -173,26 +173,55 @@ add_action( 'widgets_init', 'enregistrer_sidebar' );
 
 
 // 2023-04-02
+
+
+
 function recuperer_date_adresse_evenement($titre){
 
-// Créer une instance de WP_Query pour récupérer la page ayant le titre "Porte ouverte de TIM"
-$page_query = new WP_Query( array(
-    'post_type' => 'page',
-    'post_title' => $titre, //'Porte ouverte de TIM',
-    'posts_per_page' => 1,
-) );
+    // Créer une instance de WP_Query pour récupérer la page ayant le titre $titre
+    $page_query = new WP_Query( array(
+        'post_type' => 'page',
+        'post_title' => $titre,
+        'posts_per_page' => 1,
+    ) );
 
-// Vérifier si une page a été trouvée et récupérer la valeur du champ personnalisé "date_de_levenement"
-if ( $page_query->have_posts() ) {
-    $page = $page_query->posts[0];
-    /* var_dump($page) ; */
-    $valeurs_evenement = [];
-    $date_obj = date_create_from_format('Ymd', get_post_meta( $page->ID, 'date_de_levenement', true ));
-    $valeurs_evenement[0] = date_format($date_obj, 'd-m-Y');
-     $valeurs_evenement[1] = get_post_meta( $page->ID, 'adresse', true );
-     return $valeurs_evenement;
+    // Vérifier si une page a été trouvée et récupérer la valeur du champ personnalisé "date_de_levenement"
+    if ( $page_query->have_posts() ) {
+        $page = $page_query->posts[0];
 
-// Réinitialiser la requête de WP_Query
-wp_reset_postdata();
+        $valeurs_evenement = array();
+        $date_obj = date_create_from_format('Ymd', get_post_meta( $page->ID, 'date_de_levenement', true ));
+        $valeurs_evenement['date'] = date_format($date_obj, 'd-m-Y');
+        $valeurs_evenement['adresse'] = get_post_meta( $page->ID, 'adresse', true );
+        $valeurs_evenement['url'] = get_permalink( $page->ID );
+        
+        return $valeurs_evenement;
+
+    } else {
+        // Aucune page trouvée avec ce titre
+        return null;
+    }
 }
+
+
+function ajouter_info_evenement_menu($items, $args) {
+    // Vérifier si le menu affiché est "evenement"
+    if ($args->theme_location == 'evenement') {
+        // Récupérer le titre de chaque élément du menu
+        foreach ($args->menu->items as $item) {
+            $titre = $item->title;
+            // Récupérer les informations de l'événement correspondant
+            $date_adresse_evenement = recuperer_date_adresse_evenement($titre);
+            // Ajouter les informations à l'élément du menu
+            $items .= '<li class="menu-item">' .
+                '<a href="' . $item->url . '">' . $item->title . '</a>' .
+                '<ul class="sub-menu">' .
+                    '<li>Date: ' . $date_adresse_evenement[0] . '</li>' .
+                    '<li>Lieu: ' . $date_adresse_evenement[1] . '</li>' .
+                '</ul>' .
+            '</li>';
+        }
+    }
+    return $items;
 }
+add_filter('wp_nav_menu_items', 'ajouter_info_evenement_menu', 10, 2);

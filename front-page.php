@@ -21,26 +21,33 @@
 
 
 <section class="event-section">
-  <h2 class="event-title">    
-        <?php wp_nav_menu(array(
-            "menu"=>"evenement",
-            "container"=>"nav",
-            "container_class"=>"menu__bloc"
-        )); 
-        $date_adresse_evenement = recuperer_date_adresse_evenement('Porte ouverte de TIM');
-        ?>
-    </h2>
-  <div class="event-info">
-    <div class="event-location">
-      <h3>Lieu</h3>
-      <p><?=  $date_adresse_evenement[1] ?></p>
-    </div>
-    <div class="event-date">
-      <h3>Date</h3>
-      <p><?=  $date_adresse_evenement[0] ?></p>
-    </div>
-  </div>
+    <?php 
+  /*   $menu_items = wp_get_nav_menu_items('evenement');
+    foreach ($menu_items as $menu_item) {
+      $date_adresse_evenement = recuperer_date_adresse_evenement($menu_item->title);
+      echo '<a href="' . $menu_item->url . '">' . $menu_item->title . '</a>';
+      
+    } */
+  ?>
+
+    <?php 
+    $menu_items = wp_get_nav_menu_items('evenement');
+    foreach ($menu_items as $menu_item) {
+        $date_adresse_evenement = recuperer_date_adresse_evenement($menu_item->title);
+        echo '<div class="event-block">';
+        echo '<a href="' . $menu_item->url . '">';
+        // Afficher l'image à partir de la page d'événement
+        if (has_post_thumbnail($menu_item->object_id)) {
+            echo get_the_post_thumbnail($menu_item->object_id, 'thumbnail');
+        }
+        echo '<h3>' . $menu_item->title . '</h3>';
+        echo '</a>';
+        echo '</div>';
+    }
+    ?>
 </section>
+
+
 
 
     <section class="blocflex">
