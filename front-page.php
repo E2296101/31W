@@ -21,14 +21,13 @@
 
 
 <section class="event-section">
-  <h4>Introduction à un gestionnaire de contenu</h4>
   <h2 class="event-title">    
         <?php wp_nav_menu(array(
             "menu"=>"evenement",
             "container"=>"nav",
             "container_class"=>"menu__bloc"
         )); 
-        $date_adresse_evenement = recuperer_date_adresse_evenement();
+        $date_adresse_evenement = recuperer_date_adresse_evenement('Porte ouverte de TIM');
         ?>
     </h2>
   <div class="event-info">

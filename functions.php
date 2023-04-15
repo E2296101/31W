@@ -173,12 +173,12 @@ add_action( 'widgets_init', 'enregistrer_sidebar' );
 
 
 // 2023-04-02
-function recuperer_date_adresse_evenement(){
+function recuperer_date_adresse_evenement($titre){
 
 // Créer une instance de WP_Query pour récupérer la page ayant le titre "Porte ouverte de TIM"
 $page_query = new WP_Query( array(
     'post_type' => 'page',
-    'post_title' => 'Porte ouverte de TIM',
+    'post_title' => $titre, //'Porte ouverte de TIM',
     'posts_per_page' => 1,
 ) );
 
