@@ -20,5 +20,5 @@ L'objectif :
 - Lien : https://aecweb13.sg-host.com/
 
 #### Liens GITHUB :
-- Lien EXERCICE 04 : https://github.com/E2296101/31W.git
+- https://github.com/E2296101/31W.git
 
